@@ -8,12 +8,12 @@ JOBSTORIES
 5. Wanneer ik de app gebruik wil ik plekken kunnen beoordelen zodat het algoritme alleen maar beter word?
 
 REQUIREMENTLIST
-Gebruiksvriendelijke app
-Gebruiker moet hotspot aanbevelingen kunnen ontvangen
-De gebruiker moet favorieten kunnen markeren
-De gebruiker moet recensies kunnen achterlaten
-De gebruiker moet reviews kunnen lezen
-De gebruiker moet een persoonlijk profiel kunnen aanmaken
-De gebruiker moet makkelijk kunnen inloggen
-De gebruiker moet de app kunnen downloaden
-De gebruiker moet
+1. Gebruiksvriendelijke app
+2. Gebruiker moet hotspot aanbevelingen kunnen ontvangen
+3. De gebruiker moet favorieten kunnen markeren
+4. De gebruiker moet recensies kunnen achterlaten
+5. De gebruiker moet reviews kunnen lezen
+6. De gebruiker moet een persoonlijk profiel kunnen aanmaken
+7. De gebruiker moet makkelijk kunnen inloggen
+8. De gebruiker moet de app kunnen downloaden
+
