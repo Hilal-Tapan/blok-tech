@@ -17,3 +17,5 @@ REQUIREMENTLIST
 7. De gebruiker moet makkelijk kunnen inloggen
 8. De gebruiker moet de app kunnen downloaden
 
+hoi
+doei
