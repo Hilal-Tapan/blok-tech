@@ -1,0 +1,24 @@
+body {
+    background-color: whitesmoke;
+    font-family: helvetica;
+}
+
+h1 {
+    margin: 1em 0em 2em 0.5em;
+    color: rgb(245, 147, 102);
+}
+
+form {
+    font-size: 20px;
+    color: grey;
+    margin-left: 1em;
+}
+
+form input:last-of-type {
+    background-color: thistle;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
