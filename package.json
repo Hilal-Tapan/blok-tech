@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "nodemon helloworld.js"
+    "dev": "nodemon server.js"
 },
   "dependencies": {
     "camelcase": "^6.3.0",
