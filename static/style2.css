@@ -1,0 +1,49 @@
+:root {
+    --mainColor: black;
+    --background-color: whitesmoke;
+    --colorOrange: rgb(245, 147, 102);
+    --colorPink: thistle;
+    --colorGrey: grey;
+    --colorBlack: black;
+    --colorWhite: white;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: helvetica;
+}
+
+/* HAMBURGER MENU */
+.Hamburger nav button {
+    position: relative;
+    width: 4em;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    background-color: var(--colorPink);
+    border: none;
+    z-index: 100;
+}
+
+.Hamburger section {
+    position: fixed;
+    background-color: var(--colorPink);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4em 2em 2em;
+    transform: translateY(-100%);
+    transition: .5s;
+}
+
+.Hamburger.menuOpen section {
+    transform: translateY(0);
+}
+
+.Hamburger section a {
+    text-decoration: none;
+    color: var(--colorWhite);
+    font-size: 30px;
+}

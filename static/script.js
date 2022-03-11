@@ -1,7 +1,7 @@
 //nav menu
 // kruisje animatie en open menu
 console.log("hallo");
-var deButton = document.querySelector("nav button");
+var deButton = document.querySelector(".Hamburger nav button");
 
 deButton.addEventListener("click", openMenu);
 

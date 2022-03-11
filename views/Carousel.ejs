@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body class="Swipe">
+    <%- include('partials/header.ejs'); %>
+
+    <h1>Jouw matches</h1>
+    <div>
+        <% images.forEach(function(image){ %>
+        <section>
+            <h2><%= image.name %></h2>
+            <h3><%= image.storyline %></h3>
+            <img src="/images/<%= image.url %>" alt="">
+        </section>
+        <% }) %>
+    </div>
+
+    <div>
+
+            <a href="#">Nee</a>
+            <!-- <p>Nee</p> -->
+            <a href="#">Ja</a>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
