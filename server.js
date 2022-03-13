@@ -19,13 +19,42 @@ app.use(express.static('static'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Carousel
-app.get('/', (req, res) => {
-  //res.send('<p>home page</p>')
-  res.render('Carousel', {
-    images
-  });
+  // CAROUSEL
+  // app.get('/', (req, res) => {res.render('Carousel', {images});
+// });
+
+app.get('/', async (req, res) => {
+  //FIND IMAGE
+  const images = await db.collection('Image').find({}).toArray();
+  res.render('Carousel', {images});
+
+  // // FIND IMAGE
+  //   const id = req.params.ImageId;
+  //   const query = {_id: ObjectId(req.params.movieId)}
+  //   const Image = await db.collection('Image').findOne(query);
 });
+
+// review
+app.get('/image/:id', async (req, res) => {
+  const imageId = req.params.id;
+  const query = {"id": imageId }
+  // const Reviews = await db.collection('Reviews').find({}).toArray();
+  const image = await db.collection('Images').findOne( query)
+  res.render('review.ejs', {image});
+});
+
+// Add review sturen
+app.post('/review', async (req, res) => {
+  console.log("Hij doet hetttttttt");
+  const review = {
+    "id": req.body.imageId,
+    "review": req.body.reviewtje
+  };
+  await db.collection('Reviews').insertOne(review);
+});
+
+//
+
 
 // logIn
 app.get('/login', (req, res) => {
@@ -66,16 +95,6 @@ app.use((req, res) => {
   });
 });
 
-// Listen for requists
-app.listen(3000);
-
-app.get('/Image/:Images', async (req, res) => {
-
-  // FIND IMAGE
-    const id = req.params.ImageId;
-    const query = {_id: ObjectId(req.params.movieId)}
-    const Image = await db.collection('Image').findOne(query);
-
 
 /*****************************************************
 * Connect to database
@@ -104,4 +123,4 @@ app.listen(port, () => {
   console.log('=============================================\n\n')
 
   connectDB().then( () => console.log("We have a connection to mongo!"));
-})
+});

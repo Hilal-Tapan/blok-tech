@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style2.css">
+</head>
+
+<body class="Swipe">
+    <%- include('partials/header.ejs'); %>
+
+    <h1>Jouw matches</h1>
+    <div id="review">
+        <form action="/review" method="POST" >
+            <p>dnwidw winciq ciq cicenwi criuniqw aooc  3wnvic qoocjf ncwicnqwi <br>
+              v3wv3 csdina wsoc vwvfce2wnf2xqincw iucnwicw nduqnd12 ncd2ifh2q xqiudq </p><br><br>
+            <input type="hidden" name="imageId" value="<%= image.id %>">
+            <input type="text" name="reviewtje" placeholder="Schrijf een review!"><br><br>
+            <input type="submit" value="Verstuur">
+        </form>
+    </div>
+
+    <div>
+
+            <a href="#">Nee</a>
+            <!-- <p>Nee</p> -->
+            <a href="#">Ja</a>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

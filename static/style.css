@@ -136,3 +136,23 @@ body {
 .Swipe div a:last-child {
     background-color:lightgreen;
 }
+
+.Swipe div form {
+    border: none;
+    color: grey;
+}
+
+.Swipe div form p {
+    text-align: center;
+}
+
+.Swipe ::placeholder {
+    font-style: italic;
+    font-size: 1em;
+    color: lightgray;
+    padding: 1em;
+  }
+#review {
+    background-color: white; 
+    border-style:solid;
+}
