@@ -30,7 +30,6 @@ async function connectDB() {
   }
 }
 
-console.log(process.env.TESTVAR);
 
 //static
 app.use(express.static('static'));
@@ -41,30 +40,48 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 //Carousel
-app.get('/', async (req, res) => {
-  //FIND IMAGE
-  const images = await db.collection('Images').find({}).toArray();
-  res.render('Carousel', {
-    images
-  });
-});
+// app.get('/', async (req, res) => {
+//   //FIND IMAGE
+//   const images = await db.collection('Images').find({}).toArray();
+//   res.render('Carousel', {
+//     images
+//   });
+// });
 
 
 // review 1
+// app.get('/image/:id', async (req, res) => {
+//   const imageId = Number(req.params.id);
+//   const query = {
+//     "id": imageId
+//   };
+//   const image = await db.collection('Images').findOne(query);
+//   console.log(image);
+//   console.log('tja');
+//   res.render('review', {image });
+//   console.log('echt')
+
+// });
+
+
+
+
 app.get('/image/:id', async (req, res) => {
-  const imageId = req.params.id;
-  const query = {
-    "id": imageId
-  };
-  const image = await db.collection('Images').findOne(query)
-  // res.render('review.ejs', {
-  //   image
-  app.get('/review', async (req, res) => {
-    res.render('review.ejs', {
-      image
-  });
+  console.log('hoe vaak')
+  const image  = { "id" : 1}
+  res.render('review', { image });
 });
-});
+
+
+// app.get('/review/:id', async (req, res) => {
+//   const imageId = req.params.id;
+//   const query = {
+//     "id": imageId
+//   };
+//   const image = await db.collection('Images').findOne(query)
+//   res.render('review.ejs', {
+//     image});
+//   });
 
 //review 2
 // app.get('/review', async (req, res) => {
@@ -136,4 +153,4 @@ app.listen(port, () => {
   connectDB()
     .then(() => console.log("We have a connection to mongo!"))
     .catch(err => console.log(err))
-  });
+});
