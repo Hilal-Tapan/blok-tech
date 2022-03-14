@@ -1,6 +1,7 @@
 {
-  "scripts": {
-    "dev": "nodemon server.js"
+  "scripts": { 
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "camelcase": "^6.3.0",

@@ -111,8 +111,13 @@ body {
     overflow-x: auto;
 }
 
-.Swipe div:last-of-type {
+/* .Swipe div:last-of-type  */
+.Swipe div {
     justify-content: center;
+}
+
+.Swipe main {
+    display:flex;
 }
 
 .Swipe div a {
