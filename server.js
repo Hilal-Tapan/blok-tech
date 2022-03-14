@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', async (req, res) => {
   //FIND IMAGE
-  const images = await db.collection('Image').find({}).toArray();
+  const images = await db.collection('Images').find({}).toArray();
   res.render('Carousel', {images});
 
   // // FIND IMAGE
