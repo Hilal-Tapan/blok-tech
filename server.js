@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 var path = require('path');
+var bodyParser = require('body-parser')
 
 const {
   MongoClient
@@ -12,6 +13,14 @@ const {
 const app = express();
 const port = process.env.PORT || 5000;
 let db = null;
+
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
+
+
+// parse application/json
+app.use(bodyParser.json())
 
 /*****************************************************
  * Connect to database
@@ -30,7 +39,6 @@ async function connectDB() {
   }
 }
 
-
 //static
 app.use(express.static('static'));
 
@@ -40,65 +48,34 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 //Carousel
-// app.get('/', async (req, res) => {
-//   //FIND IMAGE
-//   const images = await db.collection('Images').find({}).toArray();
-//   res.render('Carousel', {
-//     images
-//   });
-// });
+app.get('/Carousel', async (req, res) => {
+  //FIND IMAGE
+  const images = await db.collection('Images').find({}).toArray();
+  res.render('Carousel', {
+    images
+  });
+});
 
 
-// review 1
-// app.get('/image/:id', async (req, res) => {
-//   const imageId = Number(req.params.id);
-//   const query = {
-//     "id": imageId
-//   };
-//   const image = await db.collection('Images').findOne(query);
-//   console.log(image);
-//   console.log('tja');
-//   res.render('review', {image });
-//   console.log('echt')
-
-// });
-
-
-
-
+// review 
 app.get('/image/:id', async (req, res) => {
-  console.log('hoe vaak')
-  const image  = { "id" : 1}
-  res.render('review', { image });
-});
-
-
-// app.get('/review/:id', async (req, res) => {
-//   const imageId = req.params.id;
-//   const query = {
-//     "id": imageId
-//   };
-//   const image = await db.collection('Images').findOne(query)
-//   res.render('review.ejs', {
-//     image});
-//   });
-
-//review 2
-// app.get('/review', async (req, res) => {
-//   res.render('review.ejs', {
-//     image
-//   });
-// });
-
-// Add review sturen
-app.post('/review', async (req, res) => {
-  console.log("Hij doet hetttttttt");
-  const review = {
-    "id": req.body.imageId,
-    "review": req.body.review
+  const imageId = Number(req.params.id);
+  const query = {
+    "id": imageId
   };
-  await db.collection('Reviews').insertOne(review);
+  const image = await db.collection('Images').findOne(query);
+  res.render('review', {
+    image
+  });
 });
+
+
+// Review versturen
+app.post('/review', (req, res) => {
+  db.collection('Reviews').insertOne(req.body);
+});
+
+// Crud, voeg read en update
 
 
 // logIn

@@ -157,7 +157,16 @@ body {
     color: lightgray;
     padding: 1em;
   }
+
 #review {
     background-color: white; 
     border-style:solid;
 }
+
+/* #review h2 {
+    text-align: center;
+}
+
+#review  p {
+    text-align: center;
+} */
