@@ -48,7 +48,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 //Carousel
-app.get('/Carousel', async (req, res) => {
+app.get('/', async (req, res) => {
   //FIND IMAGE
   const images = await db.collection('Images').find({}).toArray();
   res.render('Carousel', {
