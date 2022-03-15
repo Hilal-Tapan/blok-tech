@@ -3,23 +3,17 @@ const dotenv = require('dotenv').config();
 var path = require('path');
 var bodyParser = require('body-parser')
 
-const {
-  MongoClient
-} = require('mongodb');
-const {
-  ObjectId
-} = require('mongodb');
+const { MongoClient } = require('mongodb');
+const { ObjectId } = require('mongodb');
 
 const app = express();
 const port = process.env.PORT || 5000;
 let db = null;
 
-app.use(bodyParser.urlencoded({
-  extended: false
-}))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 
-// parse application/json
+//parse application/json
 app.use(bodyParser.json())
 
 /*****************************************************
@@ -41,6 +35,7 @@ async function connectDB() {
 
 //static
 app.use(express.static('static'));
+
 
 //ejs
 app.set('view engine', 'ejs');
@@ -75,8 +70,6 @@ app.post('/review', (req, res) => {
   db.collection('Reviews').insertOne(req.body);
 });
 
-// Crud, voeg read en update
-
 
 // logIn
 app.get('/login', (req, res) => {
@@ -85,12 +78,14 @@ app.get('/login', (req, res) => {
   });
 });
 
+
 // makeAcc
 app.get('/account', (req, res) => {
   res.render('makeAcc.ejs', {
     root: __dirname
   });
 });
+
 
 //favorieten
 app.get('/favorieten', (req, res) => {
@@ -105,10 +100,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+
 //Redirects
 app.get('/about-us', (req, res) => {
   res.redirect('/about');
 });
+
 
 //404 page
 app.use((req, res) => {

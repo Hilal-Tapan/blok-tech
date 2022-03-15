@@ -8,5 +8,10 @@
       "name": "Alpacas",
       "url": "alpacas.png",
       "Storyline": "Alpacas uitlaten in een prachtig natuurgebied"
-  }
+  },
+  { "id":3,
+    "name": "Rollerskating",
+    "url": "rollerskating.png",
+    "Storyline": "Rollerskating"
+}
   ]
