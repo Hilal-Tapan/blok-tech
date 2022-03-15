@@ -20,7 +20,7 @@ Runnen
 De licence die ik gebruik is MIT.
 
 ## Contact
-Naam - Hilal Tapan
-Email - Hilal.tapan@hva.n;
-Project - https://github.com/Hilal-Tapan/blok-tech.git
+* Naam - Hilal Tapan
+* Email - Hilal.tapan@hva.n;
+* Project - https://github.com/Hilal-Tapan/blok-tech.git
 
