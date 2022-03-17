@@ -16,6 +16,9 @@ Installatie
 Runnen
 ```npm start```
 
+## Database
+De database die ik gebruik is MongoDB.
+
 ## MIT Licence
 De licence die ik gebruik is MIT.
 
