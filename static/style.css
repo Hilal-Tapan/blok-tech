@@ -89,6 +89,10 @@ body {
     color: var(--colorOrange);
 }
 
+.Swipe main {
+    display:flex;
+}
+
 .Swipe h2 {
     color: var(--colorGrey)
 }
@@ -98,14 +102,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     overflow: auto;
-    scroll-snap-type: x mandatory;
-    justify-content: center;
-}
-
-
-.Swipe div {
-scroll-snap-align: start;
-scroll-behavior: smooth;
 }
 
 .Swipe section {
@@ -119,10 +115,6 @@ scroll-behavior: smooth;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     justify-content: center;
-}
-
-.Swipe main {
-    display:flex;
 }
 
 .Swipe div a {
@@ -139,8 +131,7 @@ scroll-behavior: smooth;
 }
 
 .Swipe div a:first-child {
-    background-color:lightcoral;
-    
+    background-color:lightcoral;  
 }
 
 .Swipe div a:last-child {
