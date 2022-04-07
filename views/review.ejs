@@ -13,9 +13,13 @@
     <div id="review">
         <form action="/review" method="POST">
             <h2>Reviews</h2>
-
+            
+            <div>
+                <p id="container"></p>
+            </div>
+            
             <input type="hidden" name="imageId" value="<%= image.id %>">
-            <input type="text" name="review" placeholder="Schrijf een review!"><br><br>
+            <input type="text" name="review" placeholder="Schrijf ook een review!"><br><br>
             <input type="submit" value="Verstuur">
         </form>
     </div>
