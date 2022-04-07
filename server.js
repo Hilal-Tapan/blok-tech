@@ -51,6 +51,11 @@ app.get('/', async (req, res) => {
   });
 });
 
+//API
+// app.get("/fetch("https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json") (req, res) => {})
+//                     .then(response => response.json())
+//                     .then(json => console.log(json))
+
 
 // review 
 app.get('/image/:id', async (req, res) => {

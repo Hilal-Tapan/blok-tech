@@ -89,11 +89,23 @@ body {
     color: var(--colorOrange);
 }
 
+.Swipe h2 {
+    color: var(--colorGrey)
+}
+
 .Swipe div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: center;
+}
+
+
+.Swipe div {
+scroll-snap-align: start;
+scroll-behavior: smooth;
 }
 
 .Swipe section {
@@ -101,18 +113,11 @@ body {
     min-width: 100%;
 }
 
-.Swipe section h2 {
-    color: var(--colorGrey)
-}
-
 .Swipe section img {
     width: 100%;
     display: flex;
     overflow-x: auto;
-}
-
-/* .Swipe div:last-of-type  */
-.Swipe div {
+    scroll-snap-type: x mandatory;
     justify-content: center;
 }
 
