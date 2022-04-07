@@ -24,6 +24,6 @@ De licence die ik gebruik is MIT.
 
 ## Contact
 * Naam - Hilal Tapan
-* Email - Hilal.tapan@hva.n;
+* Email - Hilal.tapan@hva.nl
 * Project - https://github.com/Hilal-Tapan/blok-tech.git
 
