@@ -13,9 +13,11 @@
     <div id="review">
         <form action="/review" method="POST">
             <h2>Reviews</h2>
-            
+
             <div>
-                <p id="container"></p>
+                <p class="review-name"></p>
+                <p class="review-rating"></p>
+                <p class="review-description"></p>
             </div>
             
             <input type="hidden" name="imageId" value="<%= image.id %>">
