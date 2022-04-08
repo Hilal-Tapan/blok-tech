@@ -1,6 +1,10 @@
 // // API
 
+//Optie 1
+
 const containerElement = document.getElementById('reviews')
+// const containerElement = document.body;
+
 fetch('https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json')
 .then(res => res.json())
 .then(res => {
@@ -27,3 +31,16 @@ fetch('https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json')
         containerElement.appendChild(reviewContainer);
     })
 })
+
+//Optie 2
+function review(data) {
+    const review = document.getElementById("reviews")
+    review.innerHTML +=
+    `   
+    <p class="review-name"></p>
+    <p class="review-rating"></p>
+    <p class="review-description"></p>  
+    `
+
+    // return iets, maar hoe?
+}
