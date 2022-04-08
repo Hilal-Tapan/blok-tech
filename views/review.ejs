@@ -14,13 +14,17 @@
         <form action="/review" method="POST">
             <h2>Reviews</h2>
 
-            <div id="reviews">
+            <!-- <div id="reviews">
                 <p class="review-name"></p>
                 <p class="review-rating"></p>
                 <p class="review-description"></p>
-            </div>
+            </div> -->
             
-            <input type="hidden" name="imageId" value="<%= image.id %>">
+            <% if (image){%>
+                <input type="hidden" name="imageId"
+            value="<%=image.id%>">  
+            <% } %>  
+            <!-- <input type="hidden" name="imageId" value=""> -->
             <input type="text" name="review" placeholder="Schrijf ook een review!"><br><br>
             <input type="submit" value="Verstuur">
         </form>
@@ -28,7 +32,6 @@
 
     <div>
         <a href="#">Nee</a>
-        <!-- <p>Nee</p> -->
         <a href="#">Ja</a>
     </div>
 

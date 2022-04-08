@@ -45,22 +45,24 @@ app.set('views', path.join(__dirname, 'views'));
 //Carousel
 app.get('/', async (req, res) => {
   //FIND IMAGE
-  const images = await db.collection('Images').find({}).toArray();
+  const images = await db.collection('imageList').find({}).toArray();
   res.render('Carousel', {
-    images
+    images: images
   });
 });
 
 
 // review 
 app.get('/image/:id', async (req, res) => {
-  const imageId = Number(req.params.id);
+  let imageId = Number(req.params.id);
+  console.log('imageId regel 58 :' + imageId);
   const query = {
     "id": imageId
-  };
-  const image = await db.collection('Images').findOne(query);
+  }; 
+  const image = await db.collection('imageList').findOne(query);
+  console.log('image regel 62: ' + image);
   res.render('review', {
-    image
+    image: image
   });
 });
 
