@@ -1,4 +1,3 @@
-
 :root {
     --mainColor: black;
     --background-color: whitesmoke;
@@ -12,7 +11,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: helvetica;  
+    font-family: helvetica;
 }
 
 /* LOGIN */
@@ -40,7 +39,7 @@ body {
     font-size: 1em;
     background-color: var(--colorPink);
     border: none;
-    color: var(--colorBlack); 
+    color: var(--colorBlack);
     text-decoration: none;
     padding: 10px 25px;
     text-align: center;
@@ -66,7 +65,7 @@ body {
 }
 
 .Account h1 {
-    margin: 1em 0em 2em 0.5em;
+    margin: 1em 0em 1em 0.5em;
     color: var(--colorOrange);
 }
 
@@ -80,11 +79,24 @@ body {
     font-size: 1em;
     background-color: var(--colorPink);
     border: none;
-    color: var(--colorBlack); 
+    color: var(--colorBlack);
     text-decoration: none;
     padding: 10px 25px;
     text-align: center;
     display: inline-block;
+    display: flex;
+    margin-top: 1em;  
+}
+
+.Account label {
+    display: flex;
+    flex-direction: column;   
+}
+
+.Account input {
+    /* margin-top: 1em; */
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 /* SWIPE CAROUSEL */
@@ -96,7 +108,7 @@ body {
 }
 
 .Swipe main {
-    display:flex;
+    display: flex;
 }
 
 .Swipe h2 {
@@ -139,11 +151,11 @@ body {
 }
 
 .Swipe div a:first-child {
-    background-color:lightcoral;  
+    background-color: lightcoral;
 }
 
 .Swipe div a:last-child {
-    background-color:lightgreen;
+    background-color: lightgreen;
 }
 
 .Swipe div form {
@@ -160,7 +172,7 @@ body {
     font-size: 1em;
     color: lightgray;
     padding: 1em;
-  }
+}
 
 
 /* REVIEWS */
@@ -172,7 +184,7 @@ body {
     font-size: 1em;
     background-color: var(--colorPink);
     border: none;
-    color: var(--colorBlack); 
+    color: var(--colorBlack);
     text-decoration: none;
     padding: 10px 25px;
     text-align: center;
@@ -180,25 +192,25 @@ body {
 }
 
 #review {
-    background-color: white; 
+    background-color: white;
     padding: 2em;
 }
 
 
 #apiReviews h2 {
-    color:var(--colorBlack);
-    font-size: 0.9em;    
+    color: var(--colorBlack);
+    font-size: 0.9em;
 }
 
 #apiReviews p {
-    color:var(--colorGrey);
+    color: var(--colorGrey);
     font-size: 0.8em;
     margin-bottom: 3em;
 }
 
 #submit-text {
-    display:none;
-    color: var(--colorBlack); 
+    display: none;
+    color: var(--colorBlack);
 }
 
 
@@ -207,8 +219,9 @@ body {
     color: var(--colorOrange);
 
 }
+
 .favorieten button {
-    color: var(--colorBlack); 
+    color: var(--colorBlack);
     background-color: var(--colorPink);
     border: none;
     padding: 5px 230px;
@@ -217,4 +230,4 @@ body {
 .favorieten button p {
     font-weight: bold;
     font-size: 1em;
- }
+}
