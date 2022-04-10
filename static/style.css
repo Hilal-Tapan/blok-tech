@@ -10,7 +10,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: helvetica;
+    font-family: Helvetica;
 }
 
 /* LOGIN */
@@ -96,6 +96,7 @@ body {
     margin-bottom: 1em;
     margin-top: 1em;
 }
+
 
 /* SWIPE CAROUSEL */
 .Swipe h1 {
