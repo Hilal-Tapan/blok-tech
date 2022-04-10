@@ -11,12 +11,23 @@ function openMenu() {
   deHeader.classList.toggle("menuOpen");
 }
 
-// console.log("hallo");
-// const deButton = document.querySelector("nav button");
 
-// deButton.addEventListener("click", openMenu);
+// Reviews
+const reviews = document.getElementsByClassName("reviewtje");
+const reviewsLabel = document.querySelectorAll(".submit-review-label");
 
-// const openMenu = () => {
-//   const deHeader = document.querySelector("body > header");
-//   deHeader.classList.toggle("menuOpen");
-// }
+for (let i = 0; i < reviews.length; i++) {
+  reviews[i].addEventListener("submit", addReviewText);
+}
+
+reviewsLabel.forEach((review) => {
+  review.style.display = "none";
+});
+
+document.getElementById("submit-text-return").addEventListener("click", () => {
+  document.getElementById("submit-text").style.display = "none";
+});
+
+function addReviewText() {
+  document.getElementById("submit-text").style.display = "initial";
+}

@@ -11,7 +11,7 @@
 
     <h1>Jouw matches</h1>
     <div id="review">
-        <form action="/review" method="POST">
+        <form action="/review" class="reviewtje" method="POST">
             <h2>Reviews</h2>
 
             <div id="reviews">
@@ -24,15 +24,22 @@
                 <input type="hidden" name="imageId"
             value="<%=image.id%>">  
             <% } %>  
+            
             <!-- <input type="hidden" name="imageId" value=""> -->
             <input type="text" name="review" placeholder="Schrijf ook een review!"><br><br>
-            <input type="submit" value="Verstuur">
+            <input class="review-submit" name="review-submit" type="submit" value="Verstuur">
+            <label for="review-submit" class="submit-review-label">Review is verstuurd!</label>
         </form>
     </div>
 
+    <article id="submit-text">
+        <span id="submit-text-return">&#10060;</span>
+        <p>Your review is submitted!</p>
+    </article>
+
     <div>
-        <a href="#">Nee</a>
-        <a href="#">Ja</a>
+        <a href="#">Terug</a>
+        <!-- <a href="#">Ja</a> -->
     </div>
 
     <script type="text/javascript" src="/script.js"></script>

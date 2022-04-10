@@ -52,7 +52,5 @@ fetch('https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json')
         <p class="review-rating"></p>
         <p class="review-description"></p>  
        `
-    
-    })}
-  }
- }
+
+    })}}}
