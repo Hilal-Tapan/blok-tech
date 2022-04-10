@@ -8,7 +8,6 @@
     --colorWhite: white;
 }
 
-
 body {
     background-color: var(--background-color);
     font-family: helvetica;
@@ -85,23 +84,21 @@ body {
     text-align: center;
     display: inline-block;
     display: flex;
-    margin-top: 1em;  
+    margin-top: 1em;
 }
 
 .Account label {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
 .Account input {
-    /* margin-top: 1em; */
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
 /* SWIPE CAROUSEL */
 .Swipe h1 {
-    /* text-align: center; */
     margin-top: 1em;
     font-size: 30px;
     color: var(--colorOrange);
@@ -217,7 +214,6 @@ body {
 /* FAVORIETEN */
 .favorieten h1 {
     color: var(--colorOrange);
-
 }
 
 .favorieten button {

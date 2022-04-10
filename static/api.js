@@ -1,4 +1,5 @@
 // // // API
+
 // Fetchen van de API
 fetch('https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json')
     .then(res => res.json())
@@ -6,7 +7,7 @@ fetch('https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json')
         // Slicen, ik wil er maar 3 zien.
         const threeReviews = data.data.slice(0, 3);
 
-         // Loopen met forEach
+        // Loopen met forEach
         threeReviews.forEach(review => {
 
             const reviewHtml =
