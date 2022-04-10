@@ -33,14 +33,26 @@
 // })
 
 // //Optie 2
-// function review(data) {
-//     const review = document.getElementById("reviews")
-//     review.innerHTML +=
-//     `   
-//     <p class="review-name"></p>
-//     <p class="review-rating"></p>
-//     <p class="review-description"></p>  
-//     `
 
-//     // return iets, maar hoe?
-// }
+fetch('https://www.fakerestapi.com/datasets/api/v1/mnc-companies-reviews.json')
+.then(res => res.json())
+.then(res => {
+    const {data} = res;
+    data.slice(0, 3).map(item => {
+    console.log(item)
+
+    function review(data) {
+        const review = document.getElementById("reviews")
+        review.innerHTML +=
+ 
+   return data.map(data => { 
+        reviews.innerHTML += 
+        `   
+        <p class="review-name"></p>
+        <p class="review-rating"></p>
+        <p class="review-description"></p>  
+       `
+    
+    })}
+  }
+ }
