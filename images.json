@@ -1,17 +1,17 @@
 [
     { "id":1,
-      "name": "Suppen",
-      "url": "suppen2.png",
-      "Storyline": "Suppen bij zonsondergang, extreem ontspannend en een herinnering om nooit te vergeten"
+      "name": "Waterfietsen op het Gooimeer",
+      "url": "waterfiets.home.png",
+      "Storyline": "Waterfietsen op het Gooimeer, een herinnering om nooit meer te vergeten"
   },
   {   "id":2,
-      "name": "Alpacas",
-      "url": "alpacas.png",
-      "Storyline": "Alpacas uitlaten in een prachtig natuurgebied"
+      "name": "Yoga op het strand",
+      "url": "yoga.home.png",
+      "Storyline": "Yoga op het strand bij Bergen aan zee"
   },
   { "id":3,
-    "name": "Rollerskating",
-    "url": "rollerskating.png",
-    "Storyline": "Rollerskating"
+    "name": "Disco rollerskaten",
+    "url": "rollerskating.home.png",
+    "Storyline": "Disco rollerskaten, dat kan nu in Rotterdam!"
 }
   ]

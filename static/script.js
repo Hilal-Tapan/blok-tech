@@ -14,10 +14,6 @@ function openMenu() {
 const reviews = document.getElementsByClassName("reviewtje");
 const reviewsLabel = document.querySelectorAll(".submit-review-label");
 
-// for (let i = 0; i < reviews.length; i++) {
-//   reviews[i].addEventListener("submit", addReviewText);
-// }
-
 reviewsLabel.forEach((review) => {
   review.style.display = "none";
 });
@@ -30,7 +26,3 @@ document.getElementById("review-submit").addEventListener("click", () => {
 });
 
 // display none in css
-
-// function addReviewText() {
-//   document.getElementById("submit-text").style.display = "initial";
-// }

@@ -6,37 +6,38 @@
     <link rel="stylesheet" href="/style2.css">
 </head>
 
-<body class="Swipe">
+<body class="reviewPage">
     <%- include('partials/header.ejs'); %>
 
-    <h1>Jouw matches</h1>
+    <h1>Reviews</h1>
+
     <div id="review">
         <form action="/review-submit" class="reviewtje" method="POST">
-            <h2>Reviews</h2>
+            <!-- <h1>Reviews</h1> -->
 
             <div id="apiReviews">
-                
-           </div>
-            
+                <!-- Hier word API ingeladen -->
+            </div>
+
             <% if (image){%>
-                <input type="hidden" name="imageId"
-            value="<%=image.id%>">  
-            <% } %>  
-            
+            <input type="hidden" name="imageId" value="<%=image.id%>">
+            <% } %>
             <!-- <input type="hidden" name="imageId" value=""> -->
+
+            <input type="text" name="review" placeholder="Naam"><br><br>
             <input type="text" name="review" placeholder="Schrijf ook een review!"><br><br>
             <input id="review-submit" name="review-submit" type="submit" value="Verstuur">
-            <label for="review-submit" class="submit-review-label" id="submit-review-label">Review is verstuurd!</label>
+            <label for="review-submit" class="submit-review-label"></label>
         </form>
     </div>
 
     <article id="submit-text">
-        <span id="submit-text-return">&#10060;</span>
+        <span id="submit-text-return"></span>
         <p>Review is verstuurd!</p>
     </article>
 
     <div>
-        <a href="#">Terug</a>
+        <a href="/">Terug</a>
         <!-- <a href="#">Ja</a> -->
     </div>
 

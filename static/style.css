@@ -1,3 +1,4 @@
+
 :root {
     --mainColor: black;
     --background-color: whitesmoke;
@@ -11,7 +12,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: helvetica;
+    font-family: helvetica;  
 }
 
 /* LOGIN */
@@ -23,7 +24,7 @@ body {
     text-align: center;
     margin-top: 3em;
     font-size: 50px;
-    color: orange;
+    color: var(--colorOrange);
 }
 
 .Login form {
@@ -36,11 +37,14 @@ body {
 }
 
 .Login form input:last-of-type {
+    font-size: 1em;
     background-color: var(--colorPink);
     border: none;
-    color: var(--colorWhite);
-    font-size: 20px;
-    border-radius: 0.5em;
+    color: var(--colorBlack); 
+    text-decoration: none;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
 }
 
 .Login h2 {
@@ -73,17 +77,19 @@ body {
 }
 
 .Account form input:last-of-type {
+    font-size: 1em;
     background-color: var(--colorPink);
     border: none;
-    color: var(--colorWhite);
-    font-size: 20px;
-    border-radius: 0.5em;
-    margin-top: 1em;
+    color: var(--colorBlack); 
+    text-decoration: none;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
 }
 
 /* SWIPE CAROUSEL */
 .Swipe h1 {
-    text-align: center;
+    /* text-align: center; */
     margin-top: 1em;
     font-size: 30px;
     color: var(--colorOrange);
@@ -94,14 +100,8 @@ body {
 }
 
 .Swipe h2 {
-    color: var(--colorGrey)
-}
-
-.Swipe div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: auto;
+    color: var(--colorGrey);
+    font-size: 1em;
 }
 
 .Swipe section {
@@ -117,6 +117,14 @@ body {
     justify-content: center;
 }
 
+.Swipe div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: center;
+}
+
 .Swipe div a {
     text-align: center;
     margin: 2em 2em;
@@ -127,7 +135,7 @@ body {
     height: 4em;
     line-height: 70px;
     text-decoration: none;
-    color: black;
+    color: var(--colorBlack);
 }
 
 .Swipe div a:first-child {
@@ -154,23 +162,59 @@ body {
     padding: 1em;
   }
 
+
+/* REVIEWS */
+.reviewPage h1 {
+    color: var(--colorOrange);
+}
+
+.reviewPage div a {
+    font-size: 1em;
+    background-color: var(--colorPink);
+    border: none;
+    color: var(--colorBlack); 
+    text-decoration: none;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
 #review {
     background-color: white; 
-    border-style:solid;
+    padding: 2em;
 }
 
-/* #review h2 {
-    text-align: center;
+
+#apiReviews h2 {
+    color:var(--colorBlack);
+    font-size: 0.9em;    
 }
 
-#review  p {
-    text-align: center;
-} */
-
-/* #submit-review-label {
-    display:none;
-} */
+#apiReviews p {
+    color:var(--colorGrey);
+    font-size: 0.8em;
+    margin-bottom: 3em;
+}
 
 #submit-text {
     display:none;
+    color: var(--colorBlack); 
 }
+
+
+/* FAVORIETEN */
+.favorieten h1 {
+    color: var(--colorOrange);
+
+}
+.favorieten button {
+    color: var(--colorBlack); 
+    background-color: var(--colorPink);
+    border: none;
+    padding: 5px 230px;
+}
+
+.favorieten button p {
+    font-weight: bold;
+    font-size: 1em;
+ }
