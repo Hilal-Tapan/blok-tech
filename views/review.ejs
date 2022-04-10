@@ -14,11 +14,9 @@
         <form action="/review" class="reviewtje" method="POST">
             <h2>Reviews</h2>
 
-            <div id="reviews">
-                <!-- <p class="review-name"></p>
-                <p class="review-rating"></p>
-                <p class="review-description"></p> -->
-            </div> 
+            <div id="apiReviews">
+                
+           </div>
             
             <% if (image){%>
                 <input type="hidden" name="imageId"
@@ -34,7 +32,7 @@
 
     <article id="submit-text">
         <span id="submit-text-return">&#10060;</span>
-        <p>Your review is submitted!</p>
+        <p>Review is verstuurd!</p>
     </article>
 
     <div>
@@ -43,7 +41,7 @@
     </div>
 
     <script type="text/javascript" src="/script.js"></script>
-    <script src="api.js"></script>
+    <script src="/api.js"></script>
 </body>
 
 </html>
