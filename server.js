@@ -68,7 +68,8 @@ app.get('/image/:id', async (req, res) => {
 
 
 // Review versturen
-app.post('/review', (req, res) => {
+app.post('/review-submit', (req, res) => {
+  res.status(204).send();
   db.collection('Reviews').insertOne(req.body);
 });
 

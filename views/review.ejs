@@ -11,7 +11,7 @@
 
     <h1>Jouw matches</h1>
     <div id="review">
-        <form action="/review" class="reviewtje" method="POST">
+        <form action="/review-submit" class="reviewtje" method="POST">
             <h2>Reviews</h2>
 
             <div id="apiReviews">
@@ -25,8 +25,8 @@
             
             <!-- <input type="hidden" name="imageId" value=""> -->
             <input type="text" name="review" placeholder="Schrijf ook een review!"><br><br>
-            <input class="review-submit" name="review-submit" type="submit" value="Verstuur">
-            <label for="review-submit" class="submit-review-label">Review is verstuurd!</label>
+            <input id="review-submit" name="review-submit" type="submit" value="Verstuur">
+            <label for="review-submit" class="submit-review-label" id="submit-review-label">Review is verstuurd!</label>
         </form>
     </div>
 

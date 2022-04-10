@@ -166,3 +166,11 @@ body {
 #review  p {
     text-align: center;
 } */
+
+/* #submit-review-label {
+    display:none;
+} */
+
+#submit-text {
+    display:none;
+}
